@@ -7,9 +7,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
   },
   "devDependencies": {
+    "cssnano": "^4.1.0",
     "node-sass": "^4.9.3"
   }
 }

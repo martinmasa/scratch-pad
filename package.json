@@ -1,18 +1,15 @@
 {
   "name": "css-playground",
   "version": "0.0.1",
-  "description": "CSS playground to try out different ideas + tutorials.",
+  "description": "CSS scratch pad to try out different ideas + tutorials.",
   "main": "src/index.js",
   "author": "Martin M",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./"
+    "start": "live-server --no-browser src"
   },
   "devDependencies": {
-    "cssnano": "^4.1.0",
-    "node-sass": "^4.9.3",
-    "parcel-bundler": "^1.10.1"
+    "live-server": "^1.2.0"
   }
 }

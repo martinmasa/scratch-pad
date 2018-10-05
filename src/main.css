@@ -1,9 +1,14 @@
+:root {
+  --black: #373737;
+}
+
 html,
 body {
   height: 100%;
   width: 100%;
+  color: var(--black);
 }
 
-  body {
+body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

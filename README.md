@@ -4,4 +4,4 @@ CSS playground to try out ideas + tutorials.
 
 ### Tools/Libraries
 
-- [Parcel](https://parceljs.org/)
+- [live-server](https://github.com/tapio/live-server#readme)

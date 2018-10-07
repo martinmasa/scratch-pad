@@ -1,8 +1,7 @@
 {
-  "name": "css-playground",
+  "name": "scratch-pad",
   "version": "0.0.1",
-  "description": "CSS scratch pad to try out different ideas + tutorials.",
-  "main": "src/index.js",
+  "description": "Scratch pad for web technologies (HTML, CSS, JS) to try out ideas + tutorials.",
   "author": "Martin M",
   "license": "MIT",
   "private": true,

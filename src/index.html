@@ -14,13 +14,39 @@
 <body>
   <p>Scratch pad for web technologies (HTML, CSS, JS) to try out ideas + tutorials.</p>
 
-  <section>
+  <section id="labs">
     <ul>
+      <!-- <li><a href="/griddyup">CSS Grid</a></li>
       <li>
-        <a href="/griddyup">CSS Grid</a>
-      </li>
+        <a href="/js30">JavaScript30</a> -
+        exercises from the <a href="https://javascript30.com/" target="_blank">JavaScript30</a> course.
+      </li> -->
     </ul>
   </section>
+
+  <script>
+    class Lab {
+      constructor(folder, label, description) {
+        this.folder = folder;
+        this.label = label;
+        this.description = description;
+      }
+    }
+
+    const labList = [
+      new Lab('griddyup', 'CSS Grid'),
+      new Lab('js30', 'JavaScript30', 'JavaScript exercises from the JavaScript30 course.'),
+    ];
+
+    const labSection = document.getElementById('labs');
+
+    labList.forEach((lab) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="/${lab.folder}">${lab.label}</a>`;
+      labSection.appendChild(li);
+    });
+
+  </script>
 </body>
 
 </html>

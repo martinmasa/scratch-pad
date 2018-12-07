@@ -34,12 +34,12 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
     const born1500s = inventors.filter((i) => i.year > 1499 && i.year < 1600);
-    // console.log(born1500s);
+    // console.table(born1500s);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
     const inventorNames = inventors.map((i) => `${i.first} ${i.last}`);
-    // console.log(inventorNames);
+    // console.table(inventorNames);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
@@ -49,12 +49,12 @@
       if (a.year === b.year) return 0;
     });
 
-    // console.log(inventorsByBirthdate);
+    // console.table(inventorsByBirthdate);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
-    const inventorsTotalAge = inventors.reduce((accumulator, current) => {
-      return accumulator + (current.passed - current.year);
+    const inventorsTotalAge = inventors.reduce((total, current) => {
+      return total + (current.passed - current.year);
     }, 0);
     // console.log(inventorsTotalAge);
 
@@ -67,7 +67,7 @@
       if (yearsLivedA > yearsLivedB) return 1;
       if (yearsLivedA === yearsLivedB) return 0;
     });
-    // console.log(inventorsByAge.map(i => i.passed - i.year));
+    // console.table(inventorsByAge.map(i => i.passed - i.year));
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -86,12 +86,12 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
-    const dataCount = data.reduce((accumulator, current) => {
+    const transportation = data.reduce((accumulator, current) => {
       accumulator[current] = (accumulator[current] || 0) + 1;
       return accumulator;
     }, {});
 
-    console.log(dataCount);
+    console.log(transportation);
 
   </script>
 </body>

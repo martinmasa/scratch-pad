@@ -1,0 +1,147 @@
+/* Import Google Font - Raleway 300 & 700 */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+:root {
+  --black: #353535;
+  --gray: #4f4f4f;
+  --medium-gray: #737373;
+  --light-gray: #c4c4c4;
+  --orange: #f96855;
+
+  --accent: var(--orange);
+  --body-background: var(--black);
+  --menu-background: var(--gray);
+  --main-font-color: var(--light-gray);
+  --menu-active-color: var(--light-gray);
+  --menu-font-color: var(--medium-gray);
+  --link-color: var(--accent);
+
+  --sans-serif: 'Raleway', sans-serif;
+  --font-light: 300;
+  --font-bold: 700;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans-serif);
+  background: var(--body-background);
+  color: var(--main-font-color);
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+.sidebar {
+  background: var(--menu-background);
+  min-width: 311px;
+  padding: 3em;
+}
+
+.sidebar .logo {
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.sidebar .logo span {
+  font-weight: var(--font-bold);
+}
+
+nav .nav-item {
+  display: inline-block;
+  color: var(--menu-font-color);
+  padding-right: 2em;
+  font-size: 1.7rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.nav-item.active {
+  color: var(--menu-active-color);
+}
+
+.main-content {
+  padding: 10%;
+  grid-area: main-content;
+  min-height: 100vh;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 20px;
+  height: 100%;
+}
+
+.portfolio-item {
+  background: var(--orange);
+  background-size: cover;
+  font-size: 1.5em;
+  font-weight: var(--font-bold);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.portfolio-item:hover {
+  color: white;
+  transition: all 0.5s ease-in-out;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+}
+
+.portfolio-item.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.portfolio-item.medium {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.portfolio-item.large {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.portfolio-item.tall {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.portfolio-item.wide {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.portfolio-item.two {
+  background-image: url(//unsplash.it/800/600);
+}
+
+
+@media (min-width: 1500px) {
+  body {
+    display: grid;
+    grid-template-areas: 
+    "sidebar main-content";
+    grid-template-columns: 300px 1fr;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    padding: 3em;
+    margin-bottom: 0;
+  }
+
+  .sidebar .logo {
+    margin-bottom: 5em;
+  }
+
+  .nav-item {
+    margin: 3.5vh 0;
+  }
+
+}
